@@ -9,7 +9,7 @@ library("tidyr")
 library("ggplot2")
 
 #Import data 
-Results_all <- read.delim("MyFileName.csv", sep = ",")
+Results_all <- read.delim("zq_test_results.csv", sep = ",")
 #select required columns
 df <- Results_all[,c(3:6, 9, 11, 12, 18, 24)]
 # Remove undetermined Ct 
