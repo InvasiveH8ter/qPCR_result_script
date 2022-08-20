@@ -9,7 +9,7 @@ library("tidyr")
 library("ggplot2")
 
 #Import data 
-Results_all <- read.delim("2022_8_17_FLBS_PL_4_ZQ_KG.csv", sep = ",")
+Results_all <- read.delim("zq_test_results.csv", sep = ",")
 #select required columns
 df <- Results_all[,c(3:6, 9, 11, 12, 18, 24)]
 # Remove undetermined Ct 
@@ -78,7 +78,7 @@ Sample.Inhibition = ifelse(test= my_results$Ct.Delay > 3,
 ## create final result table and export CSV
 result_table <- cbind(my_results, Target.Detection, Sample.Inhibition)
 print(result_table)
-write.csv(result_table, "C:/Users/leifh/OneDrive/Documents/Luikart Project/MISC/Deliverables/qPCR_R_data/FLBS_2.csv")
+write.csv(result_table, "C:/Users/.csv")
 
 
 
